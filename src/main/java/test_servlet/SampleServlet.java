@@ -32,7 +32,7 @@ public class SampleServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("Hello World!!");
 
-		RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
 		rd.forward(request, response);
 
 		String message = request.getParameter("message");

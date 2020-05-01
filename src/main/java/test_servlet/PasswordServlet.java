@@ -40,7 +40,7 @@ public class PasswordServlet extends HttpServlet {
 		password = Integer.parseInt(request.getParameter("password"));
 
 		if(password == 12345) {
-			RequestDispatcher rd = request.getRequestDispatcher("/success.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp//success.jsp");
 			rd.forward(request, response);
 		}
 	}
