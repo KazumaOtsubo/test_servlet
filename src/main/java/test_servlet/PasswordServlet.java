@@ -1,6 +1,7 @@
 package test_servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -42,6 +43,9 @@ public class PasswordServlet extends HttpServlet {
 		if(password == 12345) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp//success.jsp");
 			rd.forward(request, response);
+		} else {
+			PrintWriter out = response.getWriter();
+			out.print("間違い");
 		}
 	}
 
